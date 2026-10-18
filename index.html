@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dayglass Apps</title>
+<meta name="description" content="Dayglass Studio makes calm, private iPhone apps: Dayglass Task Planner and Dayglass Soon, a countdown and streak app with widgets.">
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffffb8; --text: #1c1c1e; --muted: #6b7280;
+    --line: #1c1c1e14; --shadow: #5b647522;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0e10; --card: #1c1c1eb8; --text: #f2f2f7; --muted: #a1a1aa; --line: #ffffff1f; --shadow: #00000066; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    background:
+      radial-gradient(circle at 10% 0%, #dce3f2 0, transparent 40%),
+      radial-gradient(circle at 95% 40%, #eee4ee 0, transparent 40%),
+      radial-gradient(circle at 20% 100%, #e3edf0 0, transparent 40%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+  @media (prefers-color-scheme: dark) { body { background: var(--bg); } }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  .brand { font-weight: 800; letter-spacing: -0.02em; font-size: 20px; text-decoration: none; color: inherit; }
+  nav .links a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 15px; }
+  nav .links a:hover { color: var(--text); }
+
+  .hero { text-align: center; padding: 64px 0 40px; }
+  .hero h1 {
+    font: 800 clamp(40px, 8vw, 72px)/1.05 ui-rounded, -apple-system, "SF Pro Rounded", sans-serif;
+    letter-spacing: -0.03em; margin: 0 0 16px;
+  }
+  .hero p { color: var(--muted); font-size: clamp(17px, 2.4vw, 21px); max-width: 560px; margin: 0 auto; }
+
+  .glass {
+    background: var(--card); border: 1px solid var(--line); border-radius: 28px;
+    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 20px 60px var(--shadow);
+  }
+
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 24px 0 64px; }
+  .app { padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .app img { width: 88px; height: 88px; border-radius: 22%; box-shadow: 0 8px 24px var(--shadow); }
+  .app h2 { margin: 8px 0 0; font-size: 24px; letter-spacing: -0.01em; }
+  .app .tag { color: var(--muted); margin: 0; }
+  .app ul { margin: 4px 0 8px; padding-left: 20px; }
+  .app li { margin: 2px 0; }
+  .app .actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 999px; font-size: 15px; font-weight: 600;
+    text-decoration: none; border: 1px solid var(--line); color: var(--text); background: transparent;
+  }
+  .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+  section h2.title { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 8px; }
+  section p.lead { color: var(--muted); margin: 0 0 24px; }
+  .support { padding: 32px; margin-bottom: 64px; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 24px; }
+  details { border-top: 1px solid var(--line); padding: 14px 0; }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--muted); font-weight: 400; }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 8px 0 0; color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 0 0 48px; }
+  footer a { color: inherit; }
+  @media (max-width: 480px) {
+    nav .links a { margin-left: 14px; }
+    .app, .support { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#">Dayglass</a>
+    <div class="links">
+      <a href="#apps">Apps</a>
+      <a href="#support">Support</a>
+      <a href="countdown-privacy.html">Privacy</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Calm apps for<br>your days.</h1>
+    <p>Simple, beautiful, private iPhone apps. No accounts, no tracking — your data stays on your devices.</p>
+  </header>
+
+  <main>
+    <div id="apps" class="apps">
+      <article class="app glass">
+        <img src="soon-icon.png" alt="Dayglass Soon app icon">
+        <h2>Dayglass Soon</h2>
+        <p class="tag">Countdown &amp; streak widgets</p>
+        <ul>
+          <li>Count down to trips, birthdays and big days</li>
+          <li>Track streaks and earn milestones</li>
+          <li>Home Screen, Lock Screen &amp; StandBy widgets</li>
+          <li>Apple Watch app and complications</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="#support">Get support</a>
+          <a class="btn" href="countdown-privacy.html">Privacy policy</a>
+        </div>
+      </article>
+
+      <article class="app glass">
+        <img src="planner-icon.png" alt="Dayglass Task Planner app icon">
+        <h2>Dayglass</h2>
+        <p class="tag">Task planner</p>
+        <ul>
+          <li>Plan your day with a calm, glassy design</li>
+          <li>Finished tasks move to History automatically</li>
+          <li>For iPhone and iPad</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="#support">Get support</a>
+        </div>
+      </article>
+    </div>
+
+    <section id="support" class="support glass">
+      <h2 class="title">Support</h2>
+      <p class="lead">Questions, feedback or a bug? I read every email and usually reply within 2 business days.</p>
+      <div class="contact">
+        <a class="btn primary" href="mailto:dailyglassapp@gmail.com?subject=Dayglass%20Support">Email dailyglassapp@gmail.com</a>
+      </div>
+
+      <details>
+        <summary>How do I add a Dayglass Soon widget?</summary>
+        <p>Touch and hold an empty area of your Home Screen, tap Edit → Add Widget, search for Dayglass Soon and choose a size. For the Lock Screen, touch and hold the Lock Screen, tap Customize → Lock Screen and add it under the clock.</p>
+      </details>
+      <details>
+        <summary>How do I choose which event a widget shows?</summary>
+        <p>Touch and hold the widget, tap Edit Widget and pick an event. Leave it empty to always show what's coming up next.</p>
+      </details>
+      <details>
+        <summary>How do reminders work?</summary>
+        <p>Open the app, tap the gear icon and turn on Event Reminders. You'll get a reminder at 9:00 AM the day before and on the day of each countdown, and on streak milestones.</p>
+      </details>
+      <details>
+        <summary>My events don't appear on Apple Watch.</summary>
+        <p>Open Dayglass Soon on your iPhone, then on your watch. Events sync automatically when both are nearby with Bluetooth on. Adding or editing any event also triggers a sync.</p>
+      </details>
+      <details>
+        <summary>Where is my data stored?</summary>
+        <p>Only on your devices. There are no accounts and nothing is sent to us. Your events are included in your regular iPhone backups.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Dayglass Studio · <a href="mailto:dailyglassapp@gmail.com">dailyglassapp@gmail.com</a> · <a href="countdown-privacy.html">Privacy</a>
+  </footer>
+</div>
+</body>
+</html>
