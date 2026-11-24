@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Ad landing page: its App Store links carry ct=meta-sign, so keep it out of search to keep that count clean. -->
+<meta name="robots" content="noindex">
+<title>Dayglass Sign: waivers and consent forms on iPad</title>
+<meta name="description" content="Ready-made waiver and consent forms your clients sign on your iPad or iPhone. Every signed form is saved as a PDF. First 5 forms free.">
+<link rel="icon" href="sign-assets/icon.png">
+<style>
+:root { --bg:#14110e; --panel:#1e1915; --line:#ffffff1f; --text:#f6f1ea; --muted:#bdb2a5; --gold:#e8c490; --ink:#1c1510; color-scheme:dark; }
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:radial-gradient(90% 520px at 85% 0%, #4a351f 0%, transparent 70%) no-repeat, var(--bg); color:var(--text);
+  font:17px/1.55 ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.wrap { max-width:1040px; margin:0 auto; padding:0 20px; }
+a { color:inherit; }
+.brand { display:flex; align-items:center; gap:12px; padding:20px 0 0; font-weight:700; font-size:18px; line-height:1.2; }
+.brand img { width:46px; height:46px; border-radius:11px; }
+.brand small { display:block; color:var(--gold); font-size:13px; font-weight:600; }
+.hero { display:grid; gap:32px; padding:32px 0 48px; }
+h1 { font-size:clamp(36px, 8.4vw, 58px); line-height:1.06; letter-spacing:-.02em; margin:0 0 16px; text-wrap:balance; }
+h2 { font-size:clamp(26px, 5vw, 36px); line-height:1.15; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance; }
+p { margin:0 0 16px; }
+.lead { font-size:19px; color:var(--muted); max-width:34em; }
+.btn { display:inline-block; background:var(--gold); color:var(--ink); font-weight:700; font-size:18px; text-decoration:none; padding:16px 26px; border-radius:999px; text-align:center; }
+.price .btn { padding-inline:20px; white-space:nowrap; }
+.btn:focus-visible, a:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+.note { color:var(--muted); font-size:15px; margin:12px 0 0; }
+.shot { display:block; width:100%; height:auto; border-radius:22px; border:1px solid var(--line); box-shadow:0 24px 60px #0009; background:#eee; }
+.row { display:grid; gap:24px; padding:44px 0; border-top:1px solid var(--line); align-items:center; }
+.row p { color:var(--muted); }
+.forms { border-top:1px solid var(--line); padding:44px 0; }
+.forms ul { list-style:none; padding:0; margin:20px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:0 24px; }
+.forms li { padding:11px 0; border-bottom:1px solid var(--line); }
+.price { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:32px 24px; margin:20px 0 44px; }
+.price ul { padding-left:20px; margin:0 0 24px; color:var(--muted); }
+footer { border-top:1px solid var(--line); padding:24px 0 120px; color:var(--muted); font-size:14px; }
+footer a { margin-right:16px; display:inline-block; padding:6px 0; }
+.bar { position:fixed; inset:auto 0 0; padding:12px 20px calc(12px + env(safe-area-inset-bottom)); background:var(--bg); border-top:1px solid var(--line); }
+.bar .btn { display:block; padding:14px; }
+@media (min-width:800px) {
+  .hero, .row { grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .row.flip > div { order:2; }
+  .forms ul { grid-template-columns:repeat(3,1fr); }
+  .price { padding:44px; }
+  .bar { display:none; }
+  footer { padding-bottom:40px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="brand"><img src="sign-assets/icon.png" width="46" height="46" alt=""><span><small>Dayglass</small>Sign</span></header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Waivers &amp; consent forms, made effortless</h1>
+        <p class="lead">Pick a ready-made template or customise your own, then hand clients your iPad. Every signed form is saved as a PDF automatically.</p>
+        <a class="btn" href="https://apps.apple.com/app/apple-store/id6826539257?pt=129624763&amp;ct=meta-sign&amp;mt=8">Download on the App Store</a>
+        <p class="note">Your first 5 signed forms are free. For iPad and iPhone.</p>
+      </div>
+      <img class="shot" src="sign-assets/signature.jpg" width="920" height="1190" alt="A client signing a tattoo consent form on an iPad">
+    </section>
+
+    <section class="row flip">
+      <div>
+        <h2>Missing answers stand out</h2>
+        <p>Required fields are highlighted, and a button takes the client to the next one. Health questions, initials, checkboxes and a photo of ID are all in one form.</p>
+        <p>Kiosk mode keeps clients inside the form. Leaving needs Face ID or your passcode.</p>
+      </div>
+      <img class="shot" loading="lazy" src="sign-assets/required.jpg" width="920" height="1190" alt="A form highlighting required fields that still need an answer">
+    </section>
+
+    <section class="row">
+      <div>
+        <h2>A PDF with the full record</h2>
+        <p>Each PDF shows who signed, when, on which device and the exact wording they agreed to. Share it, email it or print it.</p>
+        <p>Forms are saved to the client’s history, so returning clients start with their details filled in.</p>
+      </div>
+      <img class="shot" loading="lazy" src="sign-assets/waivers.jpg" width="920" height="1158" alt="A list of signed waivers beside a signed PDF, using sample clients">
+    </section>
+
+    <section class="forms">
+      <h2>11 templates, ready to edit</h2>
+      <ul>
+        <li>Tattoo</li><li>Body piercing</li><li>PMU, brows &amp; lash</li><li>Salon &amp; spa</li><li>Massage &amp; bodywork</li><li>Spray tan</li><li>Fitness classes</li><li>Yoga, Pilates &amp; dance</li><li>Martial arts</li><li>Equipment rental</li><li>Pet grooming &amp; boarding</li>
+      </ul>
+    </section>
+
+    <section class="price">
+      <h2>Pay once, keep it</h2>
+      <p>Every feature is included for your first 5 signed forms. After that, Dayglass Sign Pro is a one-time purchase for unlimited forms.</p>
+      <ul>
+        <li>No subscription and no per-form fees</li>
+        <li>No account, and it works offline</li>
+        <li>Syncs through your own private iCloud</li>
+        <li>The app has no ads, analytics or tracking</li>
+      </ul>
+      <a class="btn" href="https://apps.apple.com/app/apple-store/id6826539257?pt=129624763&amp;ct=meta-sign&amp;mt=8">Download on the App Store</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="sign-privacy.html">Privacy Policy</a><a href="sign-support.html">Support</a></p>
+    <p>Templates are examples, not legal advice. Edit them for your state or country. Dayglass Sign is not intended for medical practices or HIPAA-covered health records.</p>
+    <p>Screens show sample clients. App Store, iPad and iPhone are trademarks of Apple Inc.</p>
+  </footer>
+</div>
+<div class="bar"><a class="btn" href="https://apps.apple.com/app/apple-store/id6826539257?pt=129624763&amp;ct=meta-sign&amp;mt=8">Download on the App Store</a></div>
+</body>
+</html>
